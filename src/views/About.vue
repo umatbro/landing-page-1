@@ -1,5 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <h4>Phone number: {{ phoneNumber }}</h4>
   </div>
 </template>
+
+<script>
+import { mapState } from 'vuex';
+
+export default {
+  computed: {
+    ...mapState(['phoneNumber']),
+  },
+};
+</script>
