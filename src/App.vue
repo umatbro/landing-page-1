@@ -2,7 +2,9 @@
   <v-app dark>
     <v-toolbar>
         <router-link to="/"><v-btn>Home</v-btn></router-link>
-        <router-link to="/about"><v-btn>Kontakt</v-btn></router-link>
+        <router-link to="/about"><v-btn>O mnie</v-btn></router-link>
+        <router-link to="/services"><v-btn>Oferta</v-btn></router-link>
+        <router-link to="/repair"><v-btn>Naprawa aparatów</v-btn></router-link>
     </v-toolbar>
     <v-content>
       <router-view></router-view>
