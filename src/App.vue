@@ -1,6 +1,7 @@
 <template>
   <v-app dark>
     <v-toolbar>
+      <v-toolbar-side-icon></v-toolbar-side-icon>
         <router-link to="/"><v-btn>Home</v-btn></router-link>
         <router-link to="/about"><v-btn>O mnie</v-btn></router-link>
         <router-link to="/services"><v-btn>Oferta</v-btn></router-link>
