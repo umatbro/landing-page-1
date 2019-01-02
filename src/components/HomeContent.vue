@@ -24,5 +24,5 @@ export default {
 </script>
 
 <style>
-
+export default{}
 </style>
