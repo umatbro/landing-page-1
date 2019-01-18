@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <v-container class="my-5">
-      <v-layout row>
+      <v-layout row wrap>
         <v-flex class="col" xs12 md3>
           <h3>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi felis ligula, tempor sed tortor vel, eleifend bibendum tortor. Quisque id sem posuere, tincidunt sapien pretium, congue ex. Nam malesuada condimentum massa sed imperdiet. Proin congue aliquet libero non vestibulum. Aliquam ex eros, faucibus sit amet sollicitudin in, bibendum consectetur quam. Etiam sagittis tellus orci, vel dictum lacus iaculis a. Sed orci dui, pretium non rhoncus ut, gravida a est. Sed ultricies ipsum ut purus luctus congue. Nunc vel commodo risus, id convallis ante.
@@ -40,6 +40,6 @@ export default{};
 
 <style scoped>
 .col {
-  margin: 0 1rem;
+  padding: 0 1rem;
 }
 </style>
