@@ -22,14 +22,29 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
-      path: '/services',
-      name: 'services',
-      component: () => import(/* webpackChunkName: "services" */ './views/Services.vue'),
+      path: '/loan',
+      name: 'loan',
+      component: () => import(/* webpackChunkName: "loan" */ './views/Loan.vue'),
     },
     {
       path: '/repair',
       name: 'repair',
       component: () => import(/* webpackChunkName: "repair" */ './views/Repair.vue'),
+    },
+    {
+      path: '/photosonline',
+      name: 'photosonline',
+      component: () => import(/* webpackChunkName: "photosonline" */ './views/PhotosOnline.vue'),
+    },
+    {
+      path: '/history',
+      name: 'history',
+      component: () => import(/* webpackChunkName: "history" */ './views/History.vue'),
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import(/* webpackChunkName: "contact" */ './views/Contact.vue'),
     },
   ],
 });

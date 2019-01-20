@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Phone number: {{ phoneNumber }}</h4>
+O mnie
   </div>
 </template>
 
