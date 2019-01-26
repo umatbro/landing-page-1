@@ -17,7 +17,7 @@
 
       <!-- Big and normal screen menu -->
       <v-layout justify-center align-center class="hidden-sm-and-down">
-        <router-link v-for="route of routes" :to="route.route">
+        <router-link v-for="(route, index) of routes" :to="route.route" :key="index">
           <v-btn>{{ route.name }}</v-btn>
         </router-link>
       </v-layout>
