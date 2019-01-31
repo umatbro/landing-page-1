@@ -29,21 +29,33 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import config from '../../config';
 
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+    iconUrl: require('leaflet/dist/images/marker-icon.png'),
+    shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+});
+
 export default {
   computed: {
     ...mapState(['phoneNumber']),
   },
   mounted() {
-      const map = L.map('mapid').setView([ 51.400907, 21.156796 ], 16);
+    const pos = [ 51.400907, 21.156796 ];
+    const map = L.map('mapid').setView(pos, 16);
 
-      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-        attribution: `Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors,
-          <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,
-           Imagery © <a href="https://www.mapbox.com/">Mapbox</a>`,
-        maxZoom: 21,
-        id: 'mapbox.streets',
-        accessToken: config.mapBoxToken,
-      }).addTo(map);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+      attribution: `Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors,
+        <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,
+          Imagery © <a href="https://www.mapbox.com/">Mapbox</a>`,
+      maxZoom: 21,
+      id: 'mapbox.streets',
+      accessToken: config.mapBoxToken,
+    }).addTo(map);
+
+    // add marker
+    const marker = L.marker(pos).addTo(map);
   },
 };
 </script>
