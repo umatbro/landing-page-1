@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app light>
     <v-toolbar>
       <!-- Small screen menu -->
       <v-menu offset-y>
@@ -34,9 +34,11 @@ export default {
     data: () => {
         const routes: object[] = [
             { name: 'Home', route: '/' },
+            { name: 'Naprawa sprzętu', route: '/repair' },
+            { name: 'Wynajem studia', route: '/loan' },
             { name: 'O mnie', route: '/about' },
-            { name: 'Oferta', route: '/services' },
-            { name: 'Naprawa aparatów', route: '/repair' },
+            { name: '100-letnia historia zakładu', route: '/history' },
+            { name: 'Kontakt', route: '/contact' },
         ];
         return {
           routes,
