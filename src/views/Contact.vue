@@ -16,7 +16,7 @@
       </v-flex>
       <v-flex class="container" lg6 md6 xs12>
         <h2>Mapa</h2>
-        <div id="map-placeholder"></div>
+         <div id="mapid"></div>
       </v-flex>
     </v-layout>
   <!-- TODO Gdzie można zaparkować ? -->
@@ -25,10 +25,25 @@
 
 <script>
 import { mapState } from 'vuex';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+import config from '../../config';
 
 export default {
   computed: {
     ...mapState(['phoneNumber']),
+  },
+  mounted() {
+      const map = L.map('mapid').setView([ 51.400907, 21.156796 ], 16);
+
+      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: `Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors,
+          <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,
+           Imagery © <a href="https://www.mapbox.com/">Mapbox</a>`,
+        maxZoom: 21,
+        id: 'mapbox.streets',
+        accessToken: config.mapBoxToken,
+      }).addTo(map);
   },
 };
 </script>
@@ -38,10 +53,5 @@ export default {
   margin-top: 1rem;
 }
 
-#map-placeholder {
-  width: 320px;
-  height: 240px;
-  background-color: lightgray;
-  margin: auto;
-}
+#mapid { height: 240px; }
 </style>
