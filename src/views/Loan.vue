@@ -1,11 +1,10 @@
 <template>
   <div>
-Oferuję wynajem studia do realizacji pomysłów na sesje zdjęciowe. Studio wyposażone jest w profesjonalne oświetlenie oraz szeroki wachlarz teł (liczba mnogła od "tło" w dopełniaczu)
-
+    Oferuję wynajem studia do realizacji pomysłów na sesje zdjęciowe. Studio wyposażone jest w profesjonalne oświetlenie oraz szeroki wachlarz teł.
   </div>
   
 </template>
-//przydadzą się jakieś dwa zdjęcia tego studia
 <script>
+// TODO przydadzą się jakieś dwa zdjęcia tego studia
 export default{};
 </script>

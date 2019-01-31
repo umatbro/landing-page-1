@@ -31,11 +31,12 @@ export default new Router({
       name: 'repair',
       component: () => import(/* webpackChunkName: "repair" */ './views/Repair.vue'),
     },
-    {
-      path: '/photosonline',
-      name: 'photosonline',
-      component: () => import(/* webpackChunkName: "photosonline" */ './views/PhotosOnline.vue'),
-    },
+    // TODO
+    // {
+    //   path: '/photosonline',
+    //   name: 'photosonline',
+    //   component: () => import(/* webpackChunkName: "photosonline" */ './views/PhotosOnline.vue'),
+    // },
     {
       path: '/history',
       name: 'history',

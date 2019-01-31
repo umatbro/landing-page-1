@@ -36,7 +36,6 @@ export default {
             { name: 'Home', route: '/' },
             { name: 'Naprawa sprzętu', route: '/repair' },
             { name: 'Wynajem studia', route: '/loan' },
-            { name: 'Wywołaj zdjęcia online', route: '/PhotosOnline' },
             { name: 'O mnie', route: '/about' },
             { name: '100-letnia historia zakładu', route: '/history' },
             { name: 'Kontakt', route: '/contact' },
