@@ -46,7 +46,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # Config file
 
-Project needs config.ts file which is not included in source control. This is how config file should look like
+Project needs `config.ts` file in project's root directory which is not included in source control. This is how config file should look like
 
 ```typescript
 interface Config {
