@@ -65,5 +65,5 @@ export default {
   margin-top: 1rem;
 }
 
-#mapid { height: 240px; }
+#mapid { height: 450px; }
 </style>
