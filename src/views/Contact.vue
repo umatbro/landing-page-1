@@ -57,14 +57,15 @@ export default {
     // add marker
     const marker = L.marker(pos).addTo(map);
     const polygon = L.polygon([
-    [51.40103, 21.15709],
-    [51.40125, 21.15715],
-    [51.40132, 21.15676],
-    [51.40108, 21.15666]], 
+      [51.40103, 21.15709],
+      [51.40125, 21.15715],
+      [51.40132, 21.15676],
+      [51.40108, 21.15666],
+    ],
     {
-    color: 'blue',
-    fillOpacity: 0.5,
-}).bindPopup("Tutaj możesz zaparkować.").addTo(map);
+      color: 'blue',
+      fillOpacity: 0.5,
+    }).bindPopup('Tutaj możesz zaparkować.').addTo(map);
   },
 };
 </script>
