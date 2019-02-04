@@ -6,13 +6,20 @@
         <h2>Naprawa aparatów fotograficznych i studio fotograficzne</h2>
       </v-flex>
       <v-flex class="container" lg6 md6 xs12>
-        <h3>Kontakt</h3>
-        <h4>Tel: {{ phoneNumber }}</h4>
-        <h3>Adres zakładu</h3>
-        <h4>ul. Żeromskiego 51</h4>
-        <h4>26-600 Radom</h4>
-        <h3>Godziny otwarcia</h3>
-        <h4>poniedziałek - piątek 10:00-17:00</h4>
+        <v-list class="transparent-background">
+          <v-list-tile>
+            <v-list-tile-action><v-icon>phone</v-icon></v-list-tile-action> 
+            <v-list-tile-content>{{ phoneNumber }}</v-list-tile-content>
+          </v-list-tile>
+          <v-list-tile>
+            <v-list-tile-action><v-icon>place</v-icon></v-list-tile-action>
+            <v-list-tile-content>ul. Żeromskiego 51<br>26-600 Radom</v-list-tile-content>
+          </v-list-tile>
+          <v-list-tile>
+            <v-list-tile-action><v-icon>access_time</v-icon></v-list-tile-action>
+            <v-list-tile-content>poniedziałek - piątek: 10:00 - 17:00</v-list-tile-content>
+          </v-list-tile>
+        </v-list>
       </v-flex>
       <v-flex class="container" lg6 md6 xs12>
         <h2>Mapa</h2>
@@ -73,6 +80,12 @@ export default {
 .container {
   margin-top: 1rem;
 }
-#mapid { height: 450px; }
 
+#mapid { 
+  height: 450px; 
+}
+
+.transparent-background {
+  background-color: transparent;
+}
 </style>
