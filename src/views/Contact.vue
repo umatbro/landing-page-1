@@ -19,7 +19,6 @@
          <div id="mapid"></div>
       </v-flex>
     </v-layout>
-  <!-- TODO Gdzie można zaparkować ? -->
   </v-container>
 </template>
 
