@@ -42,7 +42,7 @@ export default {
     ...mapState(['phoneNumber']),
   },
   mounted() {
-    const pos = [ 51.400907, 21.156796 ];
+    const pos = [ 51.401, 21.15674 ];
     const map = L.map('mapid').setView(pos, 16);
 
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -56,6 +56,15 @@ export default {
 
     // add marker
     const marker = L.marker(pos).addTo(map);
+    const polygon = L.polygon([
+    [51.40103, 21.15709],
+    [51.40125, 21.15715],
+    [51.40132, 21.15676],
+    [51.40108, 21.15666]], 
+    {
+    color: 'blue',
+    fillOpacity: 0.5,
+}).bindPopup("Tutaj możesz zaparkować.").addTo(map);
   },
 };
 </script>
@@ -64,6 +73,6 @@ export default {
 .container {
   margin-top: 1rem;
 }
-
 #mapid { height: 450px; }
+
 </style>
