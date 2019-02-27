@@ -24,7 +24,17 @@
 
     </v-toolbar>
     <v-content>
-      <router-view></router-view>
+      <v-flex>
+        <v-layout row wrap>
+          <v-flex class="col" xs12 md2>
+          </v-flex>
+          <v-flex class="col" xs12 md8>
+            <router-view></router-view>
+          </v-flex>
+          <v-flex class="col" xs12 md2>
+          </v-flex>
+        </v-layout>
+      </v-flex>
     </v-content>
   </v-app>
 </template>
